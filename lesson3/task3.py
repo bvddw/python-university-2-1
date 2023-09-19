@@ -1,0 +1,5 @@
+str_input = input("Enter string: ")
+char = input("enter char to delete: ")
+new_str = str_input.replace(char, '')
+print(f"Old string: {str_input}")
+print(f"New string: {new_str}")
