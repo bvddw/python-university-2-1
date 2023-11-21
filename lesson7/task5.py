@@ -30,17 +30,17 @@ axUpLeft.plot(x, z, lw=3, c='k')
 axUpLeft.set_title('1D Plot')
 
 X1, Y1 = np.meshgrid(x, x)
-Z1 = F1(X1, Y1)
+Z1 = F2(X1, Y1)
 
-axDown = plt.subplot2grid((2, 2), (0, 1), projection='3d')
-axDown.plot_surface(X1, Y1, Z1, rstride=1, cstride=1)
-axDown.set_title('Surface Plot')
+axDown = plt.subplot2grid((2, 2), (1, 0), colspan=2, projection='3d')
+axDown.plot_wireframe(X1, Y1, Z1, rstride=8, cstride=2, color='b')
+axDown.set_title('Wireframe Plot')
 
 X2, Y2 = np.meshgrid(x, x)
-Z2 = F2(X2, Y2)
+Z2 = F1(X2, Y2)
 
-axRight = plt.subplot2grid((2, 2), (1, 0), colspan=2, projection='3d')
-axRight.plot_wireframe(X2, Y2, Z2, rstride=8, cstride=2, color='b')
-axRight.set_title('Wireframe Plot')
+axRight = plt.subplot2grid((2, 2), (0, 1), projection='3d')
+axRight.plot_surface(X2, Y2, Z2, rstride=1, cstride=1)
+axRight.set_title('Surface Plot')
 
 plt.show()

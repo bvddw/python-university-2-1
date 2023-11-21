@@ -7,11 +7,11 @@ def f(x):
 
 
 plt.close('all')
-x = np.linspace(-6, 6, 121);
-y = f(x);
-x1 = np.linspace(-6, 6, 13);
-y1 = f(x1);
-Z = np.vstack((x1, y1)).transpose()
+x = np.linspace(-6, 6, 121)
+y = f(x)
+x1 = np.linspace(-6, 6, 13)
+y1 = f(x1)
+Z = np.vstack((x1, y1)).T
 print(Z)
 plt.plot(x, y, 'r', x1, y1, 'bo-', linewidth=2)
 plt.axhline(color='black', lw=3)

@@ -16,8 +16,8 @@ def f3(x):
     return 1 / (1 + x ** 2)
 
 
-a = -np.pi
-b = np.pi
+a = 1
+b = 5
 
 
 def f(x):
@@ -38,6 +38,7 @@ fig, axes = plt.subplots(1, 2)
 fig.set_size_inches(7, 3)
 axes[0].plot(x, y, lw=3, c='k')
 axes[0].grid(True)
+
 t = np.linspace(-4, 4, 201)
 X, Y = np.meshgrid(t, t)
 axes[1].set_xlim(-4, 4)
